@@ -1,5 +1,8 @@
 <div class="container">
-<%= link_to 'User list', "/show" %>
+<div>
+    <i class="fa-solid fa-chevron-left"></i>
+    <%= link_to 'UserList Page', "/show",class:"link" %>
+</div>
   <%= form_with(model: @user, local: true,method: :post) do |form| %>
     <div class="register-form">
         <h1>Register Form</h1>

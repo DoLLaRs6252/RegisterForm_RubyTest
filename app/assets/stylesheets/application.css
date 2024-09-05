@@ -88,6 +88,11 @@ body {
   cursor: pointer;
 }
 
+.link{
+  color: #000000;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   .form-group-name,
   .form-group-dateGender,
