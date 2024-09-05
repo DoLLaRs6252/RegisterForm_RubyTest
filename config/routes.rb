@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/new', to: 'users#new'
-  get '/show', to: 'users#show'
+  get '/index', to: 'users#index'
   # get 'users/create'
   post 'users' ,to: 'users#create'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :users, only: [:index, :show, :new, :create, :destroy]
+  resources :users, only: [:index, :show, :new, :create, :edit, :update , :patch,:destroy]
   root "users#new"
 end
