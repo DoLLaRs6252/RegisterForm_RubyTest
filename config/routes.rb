@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new', to: 'users#new'
+  get '/new', to: 'users#new'
+  get '/show', to: 'users#show'
   # get 'users/create'
   post 'users' ,to: 'users#create'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
