@@ -25,11 +25,13 @@
         <td><%= user.birthday %></td>
         <td><%= user.subject %></td>
         <td>
-            <div class="div-button">
-                <button class="delete-button">
-                <i class="fa-solid fa-trash fa-xl" style="color: #ae446e;"></i>
+             <%= form_with url: user_path(user), method: :delete, local: true do %>
+              <div class="div-button">
+                <button type="submit" class="delete-button">
+                  <i class="fa-solid fa-trash fa-xl" style="color: #ae446e;"></i>
                 </button>
-            </div>
+              </div>
+            <% end %>
         </td>
       </tr>
     <% end %>
