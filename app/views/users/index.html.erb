@@ -29,17 +29,17 @@
         <td><%= user.birthday %></td>
         <td><%= user.subject %></td>
         <td>
+        <div class="div-button">
             <%= link_to edit_user_path(user), class: "edit-button" do %>
               <i class="fa-solid fa-pencil fa-xl" style="color: #4CAF50;"></i>
             <% end %>
 
              <%= form_with url: user_path(user), method: :delete, local: true do %>
-              <div class="div-button">
                 <button type="submit" class="delete-button">
-                  <i class="fa-solid fa-trash fa-xl" style="color: #ae446e;"></i>
+                  <i class="fa-solid fa-trash fa-xl" class="icon"></i>
                 </button>
-              </div>
             <% end %>
+          </div>
         </td>
       </tr>
     <% end %>

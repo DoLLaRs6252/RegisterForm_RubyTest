@@ -59,10 +59,15 @@ tr:hover {
 
 .div-button{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .delete-button{
     border: 0;
+}
+
+.delete-button:hover{
+    color: #ae446e;
 }
 
 /* Responsive design */
