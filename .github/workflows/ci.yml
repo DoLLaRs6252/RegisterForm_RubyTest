@@ -26,3 +26,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/test_odds:latest
+          platforms: linux/arm64,linux/amd64 
