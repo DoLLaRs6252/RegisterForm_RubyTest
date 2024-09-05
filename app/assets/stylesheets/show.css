@@ -1,0 +1,83 @@
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container styles */
+.show-container {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    padding: 4rem;
+}
+
+/* Heading styles */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Table styles */
+table {
+    border-radius: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #AE4476;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tr:hover {
+    background-color: #e8e8e8;
+    transition: background-color 0.3s ease;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+}
+.delete-button{
+    display: flex;
+    justify-content: center;
+    border: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    .show-container {
+        padding: 2rem;
+    }
+}

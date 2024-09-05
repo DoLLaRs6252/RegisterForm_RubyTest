@@ -11,6 +11,7 @@
       <th>Gender</th>
       <th>Birthday</th>
       <th>Subject</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,13 @@
         <td><%= user.gender %></td>
         <td><%= user.birthday %></td>
         <td><%= user.subject %></td>
+        <td>
+            <div class="div-button">
+                <button class="delete-button">
+                <i class="fa-solid fa-trash fa-xl" style="color: #ae446e;"></i>
+                </button>
+            </div>
+        </td>
       </tr>
     <% end %>
   </tbody>
