@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get '/new', to: 'users#new'
-  get '/index', to: 'users#index'
-  # get 'users/create'
-  post 'users' ,to: 'users#create'
+  # get '/new', to: 'users#new'
+  # get '/index', to: 'users#index'
+  # post 'users' ,to: 'users#create' 
+  # delete 'users/:id',to:'users#destroy', as: :user_delete 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
