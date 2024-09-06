@@ -64,10 +64,20 @@ tr:hover {
 }
 .delete-button{
     border: 0;
+    transition: transform 0.3s
 }
 
 .delete-button:hover{
     color: #ae446e;
+    transform: scale(1.1);
+}
+
+.edit-button{
+    transition: transform 0.3s
+}
+
+.edit-button:hover{
+    transform: scale(1.1);
 }
 
 /* Responsive design */
