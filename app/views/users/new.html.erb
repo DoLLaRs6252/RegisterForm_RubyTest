@@ -1,18 +1,9 @@
 <div class="container">
 <div>
     <i class="fa-solid fa-chevron-left"></i>
-    <%= link_to 'UserList Page', "/users",class:"link" %>
-</div>
-  <% if @user.errors.any? %>
-  <div id="error_explanation">
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
-  <%= form_with(model: @user, local: true,method: :post) do |form| %>
+        <%= link_to 'UserList Page', "/users",class:"link" %>
+    </div>
+  <%= form_with(model: @user,url:user_new_path, local: true,method: :post) do |form| %>
     <div class="register-form">
         <h1>Register Form</h1>
 

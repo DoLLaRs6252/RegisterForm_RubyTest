@@ -4,7 +4,7 @@
     <%= link_to 'UserList Page', "/users", class: "link" %>
   </div>
 
-  <%= form_with(model: @user, local: true, method: :patch) do |form| %>
+  <%= form_with(model: @user,url: user_edit_path ,local: true, method: :patch) do |form| %>
     <div class="register-form">
       <h1>Edit User</h1>
 

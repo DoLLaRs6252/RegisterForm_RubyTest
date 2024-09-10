@@ -1,8 +1,8 @@
 <div class="show-container">
 <div>
     <i class="fa-solid fa-chevron-left"></i>
-    <%= link_to 'Register page', "/users/new" ,class:"link"%>
-</div>
+      <%= link_to 'Register page', "/users/new" ,class:"link"%>
+    </div>
 <h1>Users List</h1>
 
 <table>
@@ -30,11 +30,11 @@
         <td><%= user.subject %></td>
         <td>
         <div class="div-button">
-            <%= link_to edit_user_path(user), class: "edit-button" do %>
+            <%= link_to user_edit_path(user), class: "edit-button" do %>
               <i class="fa-solid fa-pencil fa-xl" style="color: #4CAF50;"></i>
             <% end %>
 
-             <%= form_with url: user_path(user), method: :delete, local: true do %>
+             <%= form_with url: user_delete_path(user), method: :delete, local: true do %>
                 <button type="submit" class="delete-button">
                   <i class="fa-solid fa-trash fa-xl" class="icon"></i>
                 </button>
