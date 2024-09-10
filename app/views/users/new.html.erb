@@ -3,6 +3,15 @@
     <i class="fa-solid fa-chevron-left"></i>
     <%= link_to 'UserList Page', "/users",class:"link" %>
 </div>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
   <%= form_with(model: @user, local: true,method: :post) do |form| %>
     <div class="register-form">
         <h1>Register Form</h1>
@@ -54,7 +63,7 @@
 
             <div class="form-group">
                 <%= form.label :subject, "Subject" %>
-                <%= form.select :subject, options_for_select([["Choose option", ""], ["HTML", "HTML"], ["CSS", "CSS"], ["Javascript", "Javascript"]])%>
+                <%= form.select :subject, options_for_select([["HTML", "HTML"], ["CSS", "CSS"], ["Javascript", "Javascript"]]), { prompt: "Choose option" }, { required: true } %>
             </div>
         </div>
         <%= form.submit "Submit" , class: "btn"%>

@@ -55,7 +55,7 @@
 
       <div class="form-group">
         <%= form.label :subject, "Subject" %>
-        <%= form.select :subject, options_for_select([["Choose option", ""], ["HTML", "HTML"], ["CSS", "CSS"], ["Javascript", "Javascript"]], @user.subject) %>
+        <%= form.select :subject, options_for_select([["HTML", "HTML"], ["CSS", "CSS"], ["Javascript", "Javascript"]], @user.subject), { prompt: "Choose option" }, { required: true } %>
       </div>
 
       <%= form.submit "Update", class: "btn" %>
