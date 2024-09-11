@@ -112,6 +112,11 @@ body {
   text-decoration: none;
 }
 
+.error-message{
+  font-size: small;
+  color:red
+}
+
 @media (max-width: 600px) {
   .form-group-name,
   .form-group-dateGender,
