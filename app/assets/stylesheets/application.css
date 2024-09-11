@@ -131,14 +131,26 @@ body {
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  min-width: 35vw;
   background: #fff;
-  padding: 20px;
-  border-radius: 5px;
+  padding: 2rem;
+  border-radius: 10px;
   text-align: center;
 }
 
 .hidden {
   display: none;
+}
+.button-modal-group{
+  display: flex;
+  justify-content: center;
+}
+#icon-delete{
+  height: 3rem;
 }
 
 .btn {
@@ -150,11 +162,13 @@ body {
 }
 
 .btn-danger {
+  border-radius: 10px;
   background: red;
   color: white;
 }
 
 .btn-secondary {
+  border-radius: 10px;
   background: gray;
   color: white;
 }
