@@ -4,7 +4,14 @@
       <%= link_to 'Register page', "/users/new" ,class:"link"%>
     </div>
 <h1>Users List</h1>
-
+ <!-- Filter Form -->
+  <div class="filter-form">
+    <%= form_with url: users_path, method: :get, local: true do %>
+      <label for="subject-filter">Filter by Subject:</label>
+      <%= select_tag :subject, options_for_select([['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript']], selected: params[:subject]), include_blank: 'All Subjects', class: "filter-dropdown" %>
+      <%= submit_tag "Filter", class: "btn" %>
+    <% end %>
+  </div>
 <table>
   <thead>
     <tr>
@@ -19,7 +26,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @user.each do |user| %>
+    <% @users.each do |user| %>
       <tr>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>

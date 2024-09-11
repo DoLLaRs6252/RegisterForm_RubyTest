@@ -13,7 +13,15 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.all
+    # Fetch all unique subjects for the dropdown filter
+    @subjects = ['HTML', 'CSS', 'JavaScript']
+  
+    # Filter users by subject if a subject is selected
+    if params[:subject].present?
+      @users = User.where(subject: params[:subject])
+    else
+      @users = User.all
+    end
   end
 
   def destroy

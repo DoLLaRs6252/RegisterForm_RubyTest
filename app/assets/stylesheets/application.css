@@ -172,7 +172,14 @@ body {
   background: gray;
   color: white;
 }
+.filter-form {
+  margin-bottom: 20px;
+}
 
+.filter-dropdown {
+  padding: 5px;
+  font-size: 14px;
+}
 
 @media (max-width: 600px) {
   .form-group-name,
