@@ -68,7 +68,7 @@
 
                 <div class="form-group">
                     <%= form.label :phone, "Phone Number" %>
-                    <%= form.telephone_field :phone, id: "phone", required: true,maxlength: 12, pattern: "[0-9]{3}-[0-9]{3}-[0-9]{4}"%>
+                    <%= form.telephone_field :phone, id: "phone", required: true, maxlength: 12, data:{ controller: "phone-formatter", phone_formatter_target: "input" } %>
                     <% if @user.errors[:phone].any? %>
                         <div class="error-message">
                             <%= @user.errors[:phone].join(", ") %>
