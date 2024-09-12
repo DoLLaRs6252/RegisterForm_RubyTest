@@ -13,16 +13,24 @@ class UsersController < ApplicationController
   end
 
   def index
-    # Fetch all unique subjects for the dropdown filter
+    # Predefined subjects: HTML, CSS, JavaScript
     @subjects = ['HTML', 'CSS', 'JavaScript']
   
-    # Filter users by subject if a subject is selected
+    # Start with all users
+    @users = User.all
+  
+    # Filter by subject if one is selected
     if params[:subject].present?
-      @users = User.where(subject: params[:subject])
-    else
-      @users = User.all
+      @users = @users.where(subject: params[:subject])
+    end
+  
+    # Search by name if a search term is provided
+    if params[:search].present?
+      search_term = "%#{params[:search]}%"
+      @users = @users.where("first_name LIKE ? OR last_name LIKE ?", search_term, search_term)
     end
   end
+  
 
   def destroy
     @user = User.find(params[:id])

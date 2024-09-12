@@ -4,12 +4,16 @@
       <%= link_to 'Register page', "/users/new" ,class:"link"%>
     </div>
 <h1>Users List</h1>
- <!-- Filter Form -->
+   <!-- Filter and Search Form -->
   <div class="filter-form">
     <%= form_with url: users_path, method: :get, local: true do %>
       <label for="subject-filter">Filter by Subject:</label>
       <%= select_tag :subject, options_for_select([['HTML', 'HTML'], ['CSS', 'CSS'], ['JavaScript', 'JavaScript']], selected: params[:subject]), include_blank: 'All Subjects', class: "filter-dropdown" %>
-      <%= submit_tag "Filter", class: "btn" %>
+
+      <label for="search">Search by Name:</label>
+      <%= text_field_tag :search, params[:search], placeholder: "Search by name", class: "search-input" %>
+
+      <%= submit_tag "Filter and Search", class: "btn" %>
     <% end %>
   </div>
 <table>
